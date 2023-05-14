@@ -1,0 +1,10 @@
+$repeat 2
+PORTD &=	0b11111011 
+#10
+PORTD |=	0b01000100
+#10
+PORTD &=	0b10111011 
+#10
+PORTD =		0b01000000
+$break
+$endrep

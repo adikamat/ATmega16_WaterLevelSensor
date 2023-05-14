@@ -1,0 +1,18 @@
+$log PIND
+$log TCNT1
+$startlog inputcapture.stim
+#30
+//Pulse is created on PORTD PD6
+PIND &= 0xBF
+//10 usec cycle cpu clock delay
+#80
+// Pull PD6 ICP1( Input Capture pin High)
+PIND |= 0x40
+// Keep it high for 65 usec CPU cycle
+#520
+// Pull down it Low
+PIND &= 0xBF
+#80
+// Stop Logging data
+$stoplog
+$break

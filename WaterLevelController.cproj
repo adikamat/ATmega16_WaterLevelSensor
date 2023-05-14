@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>7.0</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.C</ToolchainName>
+    <ProjectGuid>{6b04a907-6152-4b52-8af6-a880351059f4}</ProjectGuid>
+    <avrdevice>ATmega16A</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>WaterLevelController</AssemblyName>
+    <Name>WaterLevelController</Name>
+    <RootNamespace>WaterLevelController</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <ResetRule>0</ResetRule>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <EraseKey />
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.40.0" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+    <avrtool>com.atmel.avrdbg.tool.simulator</avrtool>
+    <avrtoolserialnumber />
+    <avrdeviceexpectedsignature>0x1E9403</avrdeviceexpectedsignature>
+    <com_atmel_avrdbg_tool_simulator>
+      <ToolOptions xmlns="">
+        <InterfaceProperties>
+        </InterfaceProperties>
+      </ToolOptions>
+      <ToolType xmlns="">com.atmel.avrdbg.tool.simulator</ToolType>
+      <ToolNumber xmlns="">
+      </ToolNumber>
+      <ToolName xmlns="">Simulator</ToolName>
+    </com_atmel_avrdbg_tool_simulator>
+    <StimuliFile>D:\MyPrograms\Embedded Test\Atmel Studio\ATmega16\ATmega16Container\WaterLevelController\Simuli\RisingEdgePulse.stim</StimuliFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.Device>-mmcu=atmega16a -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.2.209\gcc\dev\atmega16a"</avrgcc.common.Device>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.209\include</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.209\include</Value>
+          </ListValues>
+        </avrgcc.assembler.general.IncludePaths>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.Device>-mmcu=atmega16a -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.2.209\gcc\dev\atmega16a"</avrgcc.common.Device>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>DEBUG</Value>
+            <Value>_AVR_IOM16_H_</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.209\include</Value>
+            <Value>../Hdr</Value>
+            <Value>../Test</Value>
+            <Value>D:\MyPrograms\Embedded Test\Atmel Studio\ATmega16\ATmega16Container\WaterLevelController\Stimuli</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.209\include</Value>
+          </ListValues>
+        </avrgcc.assembler.general.IncludePaths>
+        <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Hdr\ATmega16_Init.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Hdr\ATmega16_Int.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Hdr\ATmega16_Port.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Hdr\ATmega16_TC0.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Hdr\ATmega16_TC1.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Hdr\CharLcd.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Hdr\CharLcd_Config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Hdr\InputCapture.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Hdr\InputCapture_Config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Hdr\PulseOut.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Hdr\Std_Types.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Hdr\System.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Hdr\Usart_Config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Hdr\Ultrasonic.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Hdr\Ultrasonic_Config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Hdr\Usart.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="main.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Src\ATmega16_Init.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Src\ATmega16_Int.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Src\ATmega16_Port.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Src\ATmega16_TC0.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Src\ATmega16_TC1.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Src\CharLcd.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Src\CharLcd_CustomChar.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Src\InputCapture.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Src\PulseOut.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Src\Usart.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Src\Utrasonic.c">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Hdr" />
+    <Folder Include="ProjectDoc\" />
+    <Folder Include="Simulation\" />
+    <Folder Include="Simuli" />
+    <Folder Include="Test" />
+    <Folder Include="Src" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ProjectDoc\ATmega16.pdf">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="ProjectDoc\HC-SR04-Cytron.pdf">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="ProjectDoc\Ultrasonic distance software test sheet.xlsx">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Simulation\Atmega16WaterLevelController.pdsprj">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Simulation\Atmega16WaterLevelController.pdsprj.DESKTOP-U099Q58.Guruprasad R. T.workspace">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Simulation\Backup Of Atmega16WaterLevelController.pdsbak">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Simulation\Last Loaded Atmega16WaterLevelController.pdsbak">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Simuli\RisingEdgePulse.stim">
+      <SubType>compile</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>

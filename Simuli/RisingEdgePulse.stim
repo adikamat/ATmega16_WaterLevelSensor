@@ -1,0 +1,33 @@
+$log PIND
+$log TCNT1
+$startlog inputcapture.stim
+//*********************************************************
+#30
+//Pulse is created on PORTD PD6
+PIND &= 0xBF
+//130msecfor Init Delay. We should not give piulse before Initialization 
+#1140000
+
+//*************First Pulse**********************************
+// Pull PD6 ICP1( Input Capture pin High)
+PIND |= 0x40
+// Keep it high for #number CPU cycle 
+#48000
+// Pull down it Low
+PIND &= 0xBF
+
+//***************** Some delay *********************
+#5000
+//**********************************************
+
+//*************Second Pulse**********************************
+// Pull PD6 ICP1( Input Capture pin High)
+//PIND |= 0x40
+// Keep it high for #number CPU cycle 117 usec pulse 2.01 cm
+//#66000
+// Pull down it Low
+//PIND &= 0xBF
+
+// Stop Logging data
+$stoplog
+$break
